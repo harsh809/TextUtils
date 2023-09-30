@@ -21,7 +21,7 @@ function App() {
       <Navbar mode={mode} togglemode = {togglemode}/>
       <div className="container my-3">
         <Textform heading="Enter the text to analyze" mode={mode} togglemode = {togglemode}/>
-        {/* <About/> */}
+        {/* <About mode={mode} togglemode = {togglemode}/> */}
       </div>
     </>
   );

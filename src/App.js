@@ -41,7 +41,7 @@ function App() {
           <Route path="/about">
           <About mode={mode} togglemode={togglemode} />
           </Route>
-          <Route path="/TextUtils">
+          <Route path="/">
               <Textform
               heading="Enter the text to analyze"
               mode={mode}

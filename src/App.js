@@ -33,7 +33,7 @@ function App() {
   };
   return (
     <>
-    <Router>
+    <Router basename="/TextUtils">
       <Navbar mode={mode} togglemode={togglemode} />
       <Alert alert={alert} />
       <div className="container my-3">
@@ -41,7 +41,7 @@ function App() {
           <Route path="/about">
           <About mode={mode} togglemode={togglemode} />
           </Route>
-          <Route path="/">
+          <Route path="/TextUtils">
               <Textform
               heading="Enter the text to analyze"
               mode={mode}

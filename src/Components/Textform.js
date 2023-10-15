@@ -20,10 +20,10 @@ export default function Textform(props) {
 
     }
     const handleCopyChange = ()=>{
-      let text = document.getElementById("myBox");
-      text.select();
-      navigator.clipboard.writeText(text.value);
-      document.getSelection().removeAllRanges();
+      // let text = document.getElementById("myBox");
+      // text.select();
+      navigator.clipboard.writeText(text);
+      // document.getSelection().removeAllRanges();
       props.showalert("Copied To Clipboard","success");
     }
     const handleextraspace = ()=>{
@@ -51,8 +51,8 @@ export default function Textform(props) {
       </div>
       <div className={`container my-3 text-${(props.mode==="light"?"dark":"light")}`}>
         <h2>Your text summary</h2>
-        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
-        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length*0.008} mins to read the text</p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length*0.008} mins to read the text</p>
         <h2>Preview</h2>
         <p>{text.length>0?text:"Enter text to analyze"}</p>
       </div>
